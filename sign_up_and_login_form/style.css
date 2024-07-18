@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+ }
+ body{
+  background-color: #F5F5F5; 
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+ }
+ .container{ 
+  position: relative;
+  min-height: 570px;
+  max-width: 360px; 
+  background: white;
+  text-align: center;
+  padding:20px 2% ;
+  border-radius: 10px;
+  box-shadow: -2px 2px 25px 0px rgba(0, 171, 240, 1); 
+  overflow: hidden;
+}
+.login-container{
+    position: absolute;
+    top: 0; 
+    z-index: 2; 
+}
+.sign_up-container{
+    position: relative; 
+    z-index: 3;
+}
+ .sign_up {
+    display: grid;
+    justify-content: center;
+    gap: 10px;  
+ }
+ .login{
+    display: grid;
+    justify-content: center;
+    gap: 10px; 
+    transform: translate(-290%, 0);  
+ }
+ @keyframes moveRight {
+    0% { 
+        transform: translate(-290%, 0); 
+  }
+  100% { 
+    transform: translate(-290%, 0); 
+  }
+ 
+  100% {
+    transform: translate(0);  
+  }
+}
+@keyframes moveleft {
+    0% { 
+        transform: translate(290%, 0); 
+  }
+
+  50% {
+    transform: translate(290%,0); 
+  }
+  100% {
+    transform: translate(0);   
+  }
+}
+@keyframes hide_right {
+    0% {
+        transform: translate(0); 
+  } 
+  50% { 
+    transform: translate(290%, 0);
+  }
+  100% { 
+    transform: translate(290%, 0);  
+  }
+}
+@keyframes hide_left {
+    0% {
+        transform: translate(0); 
+  } 
+  50% { 
+    transform: translate(-290%, 0);
+  }
+  100% { 
+    transform: translate(-290%, 0);  
+  }
+}
+ svg { 
+	width: 100%; height: 100%;
+}
+.sign_up-container svg text { 
+	stroke-width: 2;
+	stroke: #00ABF0; 
+    letter-spacing: 1px;
+    fill: #00ABF0; 
+}
+.login-container svg text { 
+	stroke-width: 2;
+	stroke: #00ABF0; 
+    letter-spacing: 1px;
+    fill: #00ABF0; 
+}
+@keyframes stroke {
+	0%   {
+		fill: rgba(0,171,240,0); stroke: rgba(0,171,240,1);
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(0,171,240,0); stroke: rgba(0,171,240,1); }
+	80%  {fill: rgba(0,171,240,0); stroke: rgba(0,171,240,1); stroke-width: 3; }
+	100% {
+		fill: rgba(0,171,240,1); stroke: rgba(0,171,240,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+
+.login-container .wrapper {
+    background-color: #FFFFFF;
+    padding-top: 20px;
+    margin-bottom: -60px;
+    font-size: 25px; 
+    opacity: 0; 
+    background: transparent;
+}
+.sign_up-container .wrapper {
+    background-color: #FFFFFF;
+    margin-bottom: -60px;
+    font-size: 25px; 
+    opacity: 1; 
+    background: transparent;
+} 
+ .InputField{
+    display: grid;
+    gap: 10px;
+}
+.input{
+    display: flex;
+}
+input{
+    width: 90%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 0px 5px 5px 0px;
+    color: #333;
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: #f0f0f0;
+}
+input::placeholder {
+    color: #aaa;
+    font-weight: 500;
+}
+label{
+    padding: 10px;
+    background:#00abf0;
+    border-radius: 5px 0px 0px 5px;
+    font-size: 1rem;
+    background: #ededed;
+    color: #aaa;
+    background-color: #f0f0f0;
+}
+button{ 
+    position: relative;
+    margin-top: 25px;
+    border: none; 
+    border-radius: 5px;
+    padding: 12px 24px;   
+    background: #72D5EE;
+    border: 2px solid #72D5EE;
+    border-radius: 8px;
+    font-size: 17px;
+    color:  white; 
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .5s;
+    z-index: 1;
+}  
+button:hover{ 
+    color: #00abf0;
+}
+button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: white;
+    z-index: -1;
+    transition: .5s;
+ }
+button:hover::before{
+   width:100%;
+}
+p span{ 
+    color: #00abf0;
+    cursor: pointer;
+}
+.sign_up_with a{
+    font-size: 28px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin-top: 10px; 
+    border: 1px solid #00abf0;
+    border-radius: 5px;
+}
+.sign_up_with h6{
+    color: #00abf0;
+    font-weight: 400;
+    font-size: 14px;
+}
+.sign_up_with img{
+    width: 27px;
+    height: 25px;
+}
+.sign_up_with i{
+  color: #000; 
+}
