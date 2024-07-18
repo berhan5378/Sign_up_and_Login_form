@@ -1,3 +1,3 @@
 interactive sign-up and login forms with smooth transitions
 
-![img.png]
+![sample img](img.png)
