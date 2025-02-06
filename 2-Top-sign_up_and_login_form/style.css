@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: #1abc9c;
+    height: 100vh;
+}
+.container{
+    position: relative;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    padding: 1.5rem 1rem 1rem;
+    min-height: 480px;
+    width: 300px;
+    max-width: 350px;
+    text-align: center; 
+    overflow: hidden;
+}
+ 
+.container .btn-color-mode-switch {
+    display: inline-block;
+    margin: 0px; 
+  }
+  
+.container .btn-color-mode-switch > label.btn-color-mode-switch-inner {
+    margin: 0px;
+    width: 220px;
+    height: 40px;
+    background-color: #72D5EE;
+    border-radius: 26px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer; 
+    transition: all 0.3s ease,background-color .8s ease;
+    box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;
+    display: block;
+  }
+  
+.container .btn-color-mode-switch > label.btn-color-mode-switch-inner:before {
+    content: attr(data-login);
+    position: absolute;
+    font-size: 20px;
+    font-weight: 600;
+    top: 7px;
+    right: 20px;
+    color: #FFFFFF;
+  }
+  
+.container .btn-color-mode-switch > label.btn-color-mode-switch-inner:after {
+    content: attr(data-signup);
+    width: 110px;
+    height: 25px;
+    background: #fff;
+    border-radius: 26px;
+    position: absolute;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    left: 2px;
+    top: 2px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 6px -2px #111;
+    padding: 5px 0px;
+    color: #222;
+    font-weight: 600;
+  }
+  
+.container input[type="checkbox"] {
+    cursor: pointer;
+    width: 100px;
+    height: 25px;
+    display: none;
+    position: absolute;
+    top: 1rem; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    margin: 0px;
+  }
+  
+.container input[type="checkbox"]:checked + label .btn-color-mode-switch-inner {
+    background-color: #34A853;
+  }
+  
+.container input[type="checkbox"]:checked + label .btn-color-mode-switch-inner:after {
+    content: attr(data-login);
+    left: 108px;
+  }
+  
+.container input[type="checkbox"]:checked + label .btn-color-mode-switch-inner:before {
+    content: attr(data-signup);
+    right: auto;
+    left: 20px;
+  }
+  
+.form_container {
+    position: relative;
+    background: #00ABF0; 
+    margin-top: 1.3rem;
+}
+.form_container :is(.sign_up,.login){
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    gap: 10px;  
+    width: 100%;
+    transition: .3s ease-in-out;
+} 
+.form_container .login{
+    transform: translateX(-130%);
+}
+.container input[type="checkbox"]:checked ~ .form_container .login{
+    transform: translateX(0);
+}
+.container input[type="checkbox"]:checked ~ .form_container .sign_up{
+    transform: translateX(130%);
+}
+
+.form_container .input{
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    padding: .8rem;
+}
+.form_container label {  
+    font-size: 1rem;
+    color: #aaa; 
+}
+.form_container input{
+    width: 90%;
+    border: none;
+    outline: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: #f0f0f0;
+}
+.form_container input::placeholder {
+    color: #aaa;
+    font-weight: 500;
+}
+.form_container button{ 
+    position: relative; 
+    border: none;
+    margin-top: 1rem;
+    padding: 12px 24px;   
+    background: #72D5EE;
+    border: 2px solid #72D5EE;
+    border-radius: 8px;
+    color:  #FFFFFF; 
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;  
+} 
+
+.form_container .login button{
+    border-color: #34A853;
+    background: #34A853;
+} 
+ 
+.form_container .sign_up_with{
+    font-size: .9rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    padding: .8rem; 
+    border: 1px solid #EA4335;
+    border-radius: 5px;
+    color: #EA4335;
+}
+
+.form_container .sign_up_with + .sign_up_with{
+    border-color: #00abf0;
+    color: #00abf0;
+}
+
+.form_container .sign_up_with + .sign_up_with + .sign_up_with{
+    border-color: #000;
+    color: #000;
+}
+.apple-icon,.Microsoft-icon,
+.google-icon {
+  font-size: 18px; 
+}
