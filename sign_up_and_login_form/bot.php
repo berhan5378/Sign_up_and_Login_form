@@ -24,4 +24,5 @@ if ($text == "/start") {
     // Later we'll connect this to a database
     sendMessage($chatId, "✅ Received! We will review: $text", $token);
 }
+echo 'yes';
 ?>
