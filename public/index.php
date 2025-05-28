@@ -46,7 +46,7 @@ function sendMessage($chatId, $message, $token ,$photoArray = []) {
             'chat_id' => $chatId,
             'photo' => $fileId,
             'caption' => $message ?? '',
-            'reply_markup' => json_encode($keyboards),
+            'reply_markup' => json_encode($keyboard),
             'parse_mode' => 'HTML' // Optional: use HTML formatting
         ];
 
@@ -58,7 +58,7 @@ function sendMessage($chatId, $message, $token ,$photoArray = []) {
         'chat_id' => $chatId,
         'text' => $message,
 
-        'reply_markup' => json_encode($keyboards),
+        'reply_markup' => json_encode($keyboard),
         'parse_mode' => 'HTML' // Optional: use HTML formatting
     ];
     file_get_contents($url . "?" . http_build_query($post));
