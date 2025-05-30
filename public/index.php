@@ -114,7 +114,6 @@ if($message) {
                // Notify the admin about the new vent
                 $msgforAdmin = <<<TEXT
                 📢 *New Vent from @$fromUser* #$messageId
-                chat id: $chatId
                 TEXT;
                 sendMessage($adminChatId, $msgforAdmin, $token,$keyboard_default);
                
