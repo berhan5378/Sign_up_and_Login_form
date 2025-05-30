@@ -1,6 +1,6 @@
 <?php 
 // Replace with your bot token
-$token = "7763712242:AAFGCV-kZpLnAcB9LHlLRqKsorT5Kp_e8og";
+$token = getenv('BOT_TOKEN');
 $responsed = json_decode(file_get_contents("php://input"), TRUE);
 
 $channelId = '-1002642226498'; 
