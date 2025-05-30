@@ -18,8 +18,8 @@ $keyboard_default = [
 $keyboard_for_channel = [
     "inline_keyboard" => [ 
         [
-            ["text" => "✍️ Write a vent", "url" => "https://t.me/ScamsChecks_bot?start=writeMsg"],
-            ["text" => "⚠️ Report", "url" => "https://t.me/ScamsChecks_bot?start=report_$messageId"]
+            ["text" => "✍️ Write a vent", "url" => "https://t.me/aau_5k_vent_bot?start=writeMsg"],
+            ["text" => "⚠️ Report", "url" => "https://t.me/aau_5k_vent_bot?start=report_$messageId"]
         ] 
         ]
 ];
