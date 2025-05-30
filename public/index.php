@@ -113,7 +113,7 @@ if($message) {
 
                // Notify the admin about the new vent
                 $msgforAdmin = <<<TEXT
-                📢 *New Vent from @$fromUser* #$messageId
+                📢 *New Vent from @$fromUser* #$messageId and chat id $chatId
                 TEXT;
                 sendMessage($adminChatId, $msgforAdmin, $token,$keyboard_default);
                
