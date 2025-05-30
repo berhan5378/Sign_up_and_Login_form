@@ -76,7 +76,7 @@ if($message) {
             sendMessage($chatId, $msg, $token,$keyboard_default);
         }elseif (strpos($text, '/start report_') === 0) {
             $msg_id = str_replace('/start report_', '', $text);
-            $msg = "⚠️ *Report for vent : $msg_id*";
+            $msg = "⚠️ *Report for vent : #$msg_id*";
             sendMessage($chatId, $msg, $token, $keyboard_for_reply);
         }elseif ($text == "/start writeMsg") {
             $msg = "✍️ Write your anonymous message below 👇";
